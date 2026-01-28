@@ -4,13 +4,25 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 
+
+
+import { HeroesModule } from './heroes/heroes.module';
+import { CounterModule } from './counter/counter.module';
+import { DbzModule } from './dbz/dbz.module';
+
 @NgModule({
   declarations: [
-    App
+    App,
+
+
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CounterModule,
+    HeroesModule,
+    DbzModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
