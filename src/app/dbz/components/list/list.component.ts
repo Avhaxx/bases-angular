@@ -10,19 +10,16 @@ import { Character } from '../../interfaces/character.interface';
 })
 export class ListComponent {
   @Output()
-  public onDeleteId: EventEmitter<number> = new EventEmitter<number>();
+  public onDeleteId: EventEmitter<string> = new EventEmitter<string>();
 
   @Input()
    public characterList: Character[] = [];
 
-  emitDelete(index: number):void{
-    console.log({index}, 'emitDelete');
-    this.onDeleteId.emit(index);
-  }
+  emitDelete(id: string):void{
+      console.log(id, 'emitDelete');
 
-  onDeleteCharacter(index: number):void{
-   console.log({index});
+    this.onDeleteId.emit(id);
+
 
   }
-
 }

@@ -1,6 +1,6 @@
 <h4>Listado de Personajes</h4>
     <ul class="list-group ">
-      <li *ngFor="let character of characterList; let i = index
+      <li *ngFor="let character of characterList; let i = index ;
       let islast = last ;let esEven = even "
       class="list-group-item d-flex justify-content-between align-items-center"
       [ngClass]="{'list-group-item-dark': islast ,
@@ -12,9 +12,10 @@
       <strong>({{character.power}})</strong>
 
 
+
       </div>
 
-      <button (click)="emitDelete(i)" (click)="onDeleteCharacter(i)" class="btn btn-danger">X</button>
+      <button (click)="emitDelete(character.id!)" class="btn btn-danger">X</button>
 
 
      </li>

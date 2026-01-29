@@ -19,11 +19,13 @@ export class AddCharacterComponent {
     power:0
   }
 
-  emitCharacter():void{
+  emitCharacter(): void {
     console.log(this.character);
-    if (this.character.name.length ===0)return;
-    this.onNewCharacter.emit(this.character);
-
+    if (this.character.name.length === 0) return;
+    // Emit a copy to avoid reference issues
+    this.onNewCharacter.emit({ ...this.character });
+    // Reset the form
+    this.character = { name: '', power: 0 };
   }
 
 }
