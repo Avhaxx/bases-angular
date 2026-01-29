@@ -4,7 +4,7 @@
 <div class="row">
 
   <div class="col">
-    <app-dbz-list [characterList]="characters" (onDeleteId)="ondeleteCharacter(index)" ></app-dbz-list>
+    <app-dbz-list [characterList]="characters" (onDeleteId)="ondeleteCharacter($event)" ></app-dbz-list>
   </div>
 
   <div class="col">

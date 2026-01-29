@@ -24,7 +24,8 @@ export class MainPageComponent  {
 
   }
   ondeleteCharacter(index:number):void{
-    this.characters.slice(index,1);
+    console.log({index}, 'ondeleteCharacter');
+    this.characters.splice(index,1);
   }
 
 }
